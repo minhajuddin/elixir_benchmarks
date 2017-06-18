@@ -12,8 +12,8 @@
     end,
     "pattern_match" => fn -> "/haha" <> rest = path; rest end,
     "slice" => fn -> String.slice(path, String.length("/haha")..-1) end,
-    #"replace_prefix" => fn -> String.replace_prefix(path, "/haha", "") end,
-    #"split" => fn -> String.splitter(path, "/") |> Enum.drop(1) |> Enum.join("/") end,
-    #"regex" => fn -> String.replace(path, subdomain_rx, "") end,
+    "replace_prefix" => fn -> String.replace_prefix(path, "/haha", "") end,
+    "split" => fn -> String.splitter(path, "/") |> Enum.drop(1) |> Enum.join("/") end,
+    "regex" => fn -> String.replace(path, subdomain_rx, "") end,
   })
 end).()
